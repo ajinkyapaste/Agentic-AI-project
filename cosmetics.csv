@@ -1,0 +1,51 @@
+Product_ID,Product_Name,Category,Price,Stock,Monthly_Sales,Revenue,Customer_Segment,Season,Festival,Market_Trend_Score,Predicted_Growth_%,Month
+CO101,Face Wash,Skincare,9.18,966,197,1808.46,mid,Summer,Eid,5,14,June
+CO102,Sunscreen,Skincare,9.51,772,492,4678.92,low,Monsoon,Christmas,7,7,September
+CO103,Lipstick,Makeup,14.38,460,306,4400.28,high,Winter,Valentine’s,4,11,October
+CO104,Nail Polish,Makeup,7.96,179,395,3144.2,mid,Winter,Eid,7,8,April
+CO105,Perfume,Fragrance,46.06,930,362,16673.72,high,Summer,Diwali,10,13,March
+CO106,Perfume,Fragrance,33.88,541,442,14974.96,mid,Summer,Valentine’s,6,9,January
+CO107,Nail Polish,Makeup,5.93,426,192,1138.56,mid,Winter,Valentine’s,9,9,April
+CO108,Nail Polish,Makeup,3.13,627,351,1098.63,high,All Season,Valentine’s,4,10,March
+CO109,Face Wash,Skincare,9.87,1000,456,4500.72,low,Summer,Diwali,5,5,October
+CO110,Lipstick,Makeup,14.65,272,190,2783.5,mid,All Season,Diwali,6,9,May
+CO111,Nail Polish,Makeup,6.06,640,446,2702.76,low,Monsoon,–,10,11,January
+CO112,Lipstick,Makeup,12.68,474,62,786.16,low,Winter,Eid,4,11,December
+CO113,Face Wash,Skincare,6.34,546,392,2485.28,high,Winter,Valentine’s,6,5,August
+CO114,Face Wash,Skincare,5.12,404,295,1510.4,high,All Season,Diwali,4,9,April
+CO115,Face Wash,Skincare,7.48,266,364,2722.72,high,Summer,Christmas,7,12,October
+CO116,Nail Polish,Makeup,4.0,758,299,1196.0,low,All Season,Christmas,8,14,December
+CO117,Sunscreen,Skincare,8.69,896,401,3484.69,low,Winter,Eid,10,12,April
+CO118,Sunscreen,Skincare,10.48,351,385,4034.8,low,All Season,Diwali,8,7,May
+CO119,Sunscreen,Skincare,8.66,965,334,2892.44,mid,Monsoon,–,5,7,August
+CO120,Face Wash,Skincare,6.52,796,122,795.44,mid,Summer,Valentine’s,9,5,November
+CO121,Perfume,Fragrance,37.78,123,373,14091.94,low,All Season,Valentine’s,5,10,May
+CO122,Sunscreen,Skincare,11.1,250,158,1753.8,mid,All Season,Valentine’s,7,7,February
+CO123,Face Wash,Skincare,6.96,275,180,1252.8,low,Winter,Diwali,10,10,August
+CO124,Nail Polish,Makeup,7.83,994,213,1667.79,mid,All Season,Valentine’s,4,6,January
+CO125,Face Wash,Skincare,5.38,409,189,1016.82,high,All Season,Valentine’s,10,12,October
+CO126,Perfume,Fragrance,44.18,359,90,3976.2,high,All Season,–,8,6,August
+CO127,Face Wash,Skincare,8.05,833,152,1223.6,low,Monsoon,Christmas,9,9,August
+CO128,Sunscreen,Skincare,11.24,842,362,4068.88,mid,Winter,Diwali,9,9,July
+CO129,Nail Polish,Makeup,5.17,169,431,2228.27,high,All Season,Christmas,6,7,January
+CO130,Perfume,Fragrance,36.23,298,419,15180.37,high,All Season,Diwali,7,15,July
+CO131,Face Wash,Skincare,5.27,461,353,1860.31,mid,Monsoon,Diwali,7,7,April
+CO132,Sunscreen,Skincare,11.84,985,269,3184.96,low,Monsoon,Diwali,6,5,January
+CO133,Sunscreen,Skincare,9.4,984,286,2688.4,high,Winter,Diwali,7,7,March
+CO134,Perfume,Fragrance,32.78,151,62,2032.36,low,Monsoon,Christmas,7,8,November
+CO135,Sunscreen,Skincare,9.84,660,52,511.68,mid,All Season,Eid,5,8,July
+CO136,Face Wash,Skincare,6.92,443,154,1065.68,low,Summer,–,5,5,July
+CO137,Lipstick,Makeup,14.91,182,449,6694.59,high,All Season,Diwali,6,7,June
+CO138,Sunscreen,Skincare,9.74,371,288,2805.12,high,Summer,Diwali,4,14,November
+CO139,Face Wash,Skincare,6.53,215,124,809.72,mid,Monsoon,Christmas,8,11,March
+CO140,Perfume,Fragrance,46.9,907,489,22934.1,low,All Season,Eid,6,7,August
+CO141,Face Wash,Skincare,7.25,837,98,710.5,low,Summer,–,6,15,December
+CO142,Lipstick,Makeup,10.75,597,421,4525.75,mid,Winter,Eid,10,10,June
+CO143,Sunscreen,Skincare,11.97,443,433,5183.01,low,All Season,–,7,5,July
+CO144,Sunscreen,Skincare,8.61,645,42,361.62,high,All Season,Diwali,8,15,December
+CO145,Sunscreen,Skincare,8.73,750,309,2697.57,mid,Monsoon,Eid,10,9,August
+CO146,Nail Polish,Makeup,5.81,251,88,511.28,mid,Summer,–,7,9,January
+CO147,Face Wash,Skincare,8.51,493,195,1659.45,mid,Winter,Eid,10,15,July
+CO148,Nail Polish,Makeup,7.99,230,165,1318.35,mid,Winter,Eid,10,12,November
+CO149,Lipstick,Makeup,13.88,978,96,1332.48,mid,Monsoon,Diwali,6,13,September
+CO150,Sunscreen,Skincare,11.71,170,161,1885.31,mid,Winter,–,9,5,July

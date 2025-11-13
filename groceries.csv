@@ -1,0 +1,51 @@
+Product_ID,Product_Name,Category,Price,Stock,Monthly_Sales,Revenue,Customer_Segment,Season,Festival,Market_Trend_Score,Predicted_Growth_%,Month
+GR101,Tea,Beverage,3.95,666,407,1607.65,high,Winter,Diwali,6,10,February
+GR102,Cooking Oil,Essentials,3.85,603,56,215.6,mid,Summer,Valentine’s,9,10,July
+GR103,Tea,Beverage,2.02,596,336,678.72,high,All Season,–,4,6,September
+GR104,Basmati Rice,Food Grains,2.19,178,134,293.46,low,Summer,–,10,13,December
+GR105,Milk,Dairy,1.76,985,170,299.2,high,All Season,Christmas,8,15,June
+GR106,Tea,Beverage,2.89,377,481,1390.09,high,Winter,–,6,11,July
+GR107,Basmati Rice,Food Grains,1.83,535,211,386.13,low,Summer,Valentine’s,10,12,March
+GR108,Basmati Rice,Food Grains,2.56,154,343,878.08,mid,Summer,Diwali,4,7,April
+GR109,Basmati Rice,Food Grains,2.94,765,74,217.56,mid,Monsoon,Eid,4,13,March
+GR110,Milk,Dairy,1.43,206,111,158.73,high,Summer,Diwali,10,13,January
+GR111,Sugar,Essentials,1.32,221,99,130.68,low,Summer,Diwali,4,12,September
+GR112,Milk,Dairy,1.59,477,332,527.88,low,Monsoon,–,8,10,May
+GR113,Sugar,Essentials,1.21,59,165,199.65,mid,Summer,–,7,15,July
+GR114,Basmati Rice,Food Grains,2.78,570,248,689.44,mid,Summer,–,9,15,July
+GR115,Sugar,Essentials,1.11,546,323,358.53,low,Monsoon,Valentine’s,7,12,April
+GR116,Basmati Rice,Food Grains,2.67,746,256,683.52,low,Winter,Eid,10,10,December
+GR117,Basmati Rice,Food Grains,2.38,770,388,923.44,mid,Monsoon,Diwali,4,11,September
+GR118,Tea,Beverage,4.55,221,435,1979.25,mid,Monsoon,Diwali,7,11,July
+GR119,Sugar,Essentials,1.65,860,324,534.6,high,Summer,Diwali,9,10,May
+GR120,Tea,Beverage,4.51,770,434,1957.34,high,Monsoon,Eid,9,12,November
+GR121,Sugar,Essentials,1.59,184,275,437.25,low,Winter,Christmas,4,8,June
+GR122,Basmati Rice,Food Grains,2.91,992,443,1289.13,high,Winter,–,4,8,November
+GR123,Milk,Dairy,1.64,163,359,588.76,high,Winter,–,4,8,May
+GR124,Basmati Rice,Food Grains,1.33,929,148,196.84,low,Summer,Diwali,8,13,January
+GR125,Tea,Beverage,2.93,259,179,524.47,high,Winter,Christmas,4,8,November
+GR126,Sugar,Essentials,1.13,774,351,396.63,low,Monsoon,Diwali,7,14,August
+GR127,Sugar,Essentials,1.18,948,34,40.12,high,All Season,–,6,14,April
+GR128,Basmati Rice,Food Grains,2.85,84,277,789.45,high,All Season,–,6,9,June
+GR129,Basmati Rice,Food Grains,1.74,627,486,845.64,low,Monsoon,Diwali,7,12,October
+GR130,Milk,Dairy,1.36,247,390,530.4,low,Winter,Christmas,10,6,May
+GR131,Sugar,Essentials,1.27,431,243,308.61,low,Winter,Diwali,7,5,August
+GR132,Cooking Oil,Essentials,3.05,583,21,64.05,mid,All Season,Eid,5,14,May
+GR133,Tea,Beverage,4.72,486,311,1467.92,low,Summer,Diwali,5,6,June
+GR134,Milk,Dairy,1.08,410,488,527.04,low,All Season,–,4,5,January
+GR135,Basmati Rice,Food Grains,1.96,305,185,362.6,low,All Season,Diwali,8,11,July
+GR136,Tea,Beverage,4.31,565,200,862.0,mid,Winter,–,6,5,March
+GR137,Milk,Dairy,1.25,598,169,211.25,mid,Summer,–,4,12,March
+GR138,Sugar,Essentials,1.22,188,24,29.28,mid,All Season,–,9,13,September
+GR139,Basmati Rice,Food Grains,2.18,439,138,300.84,mid,All Season,Diwali,7,15,October
+GR140,Basmati Rice,Food Grains,2.3,707,135,310.5,high,All Season,–,6,13,September
+GR141,Tea,Beverage,4.89,336,441,2156.49,high,Summer,Christmas,6,9,March
+GR142,Tea,Beverage,2.45,885,55,134.75,low,Monsoon,–,4,13,July
+GR143,Tea,Beverage,2.43,94,43,104.49,high,All Season,Diwali,5,11,March
+GR144,Tea,Beverage,2.39,892,448,1070.72,low,Winter,Christmas,6,8,August
+GR145,Cooking Oil,Essentials,2.78,86,199,553.22,low,All Season,Diwali,6,7,June
+GR146,Milk,Dairy,1.19,539,34,40.46,mid,All Season,Christmas,4,8,November
+GR147,Tea,Beverage,3.26,843,272,886.72,high,Monsoon,Diwali,7,11,April
+GR148,Basmati Rice,Food Grains,1.87,633,312,583.44,low,All Season,–,8,12,February
+GR149,Sugar,Essentials,1.77,253,377,667.29,high,Monsoon,Valentine’s,9,6,February
+GR150,Tea,Beverage,2.42,222,355,859.1,mid,All Season,Diwali,4,9,October

@@ -1,0 +1,51 @@
+Product_ID,Product_Name,Category,Price,Stock,Monthly_Sales,Revenue,Customer_Segment,Season,Festival,Market_Trend_Score,Predicted_Growth_%,Month
+EL101,Extension Cord,Accessories,7.62,54,319,2430.78,mid,All Season,Diwali,9,7,March
+EL102,Smart TV,Television,790.86,283,77,60896.22,mid,Monsoon,Valentine’s,6,6,July
+EL103,Smart TV,Television,704.24,754,402,283104.48,high,Winter,Eid,8,12,December
+EL104,Smart TV,Television,713.06,492,271,193239.26,high,Monsoon,Diwali,8,8,February
+EL105,Laptop,Computing,953.91,114,179,170749.89,mid,Summer,Diwali,4,8,June
+EL106,Mixer Grinder,Kitchen,73.67,424,389,28657.63,mid,Winter,–,10,7,September
+EL107,Extension Cord,Accessories,14.22,959,412,5858.64,mid,Winter,Diwali,8,9,March
+EL108,Laptop,Computing,746.85,860,79,59001.15,high,Monsoon,Diwali,4,13,February
+EL109,Mixer Grinder,Kitchen,65.44,343,88,5758.72,mid,Summer,–,10,14,November
+EL110,Mixer Grinder,Kitchen,85.55,477,384,32851.2,mid,Monsoon,Diwali,4,14,November
+EL111,Laptop,Computing,849.61,580,475,403564.75,low,Summer,Diwali,7,10,May
+EL112,Extension Cord,Accessories,5.91,297,209,1235.19,high,Summer,Diwali,9,7,July
+EL113,Extension Cord,Accessories,7.8,481,455,3549.0,mid,Summer,Diwali,4,6,July
+EL114,LED Bulb,Lighting,13.43,773,105,1410.15,mid,Winter,Christmas,7,15,August
+EL115,Laptop,Computing,828.53,775,491,406808.23,high,All Season,Eid,6,15,December
+EL116,Laptop,Computing,1102.7,191,346,381534.2,mid,All Season,Christmas,7,14,September
+EL117,LED Bulb,Lighting,12.92,111,476,6149.92,low,All Season,–,6,11,April
+EL118,Laptop,Computing,1422.29,306,334,475044.86,high,All Season,–,10,9,August
+EL119,Mixer Grinder,Kitchen,80.86,959,357,28867.02,mid,Monsoon,–,8,8,October
+EL120,Extension Cord,Accessories,14.63,703,466,6817.58,mid,Monsoon,Valentine’s,8,9,July
+EL121,Laptop,Computing,1008.45,187,432,435650.4,high,Monsoon,Valentine’s,7,10,November
+EL122,Laptop,Computing,1468.61,617,383,562477.63,mid,Summer,Christmas,10,5,August
+EL123,LED Bulb,Lighting,10.86,295,162,1759.32,high,Winter,–,6,7,July
+EL124,Smart TV,Television,603.95,532,260,157027.0,mid,All Season,Eid,6,9,January
+EL125,Extension Cord,Accessories,14.11,586,33,465.63,mid,Winter,Eid,10,5,November
+EL126,Laptop,Computing,894.78,451,74,66213.72,mid,All Season,–,5,12,April
+EL127,Smart TV,Television,613.89,407,147,90241.83,low,Monsoon,Valentine’s,5,14,January
+EL128,Mixer Grinder,Kitchen,107.28,925,168,18023.04,low,Winter,Valentine’s,5,13,July
+EL129,LED Bulb,Lighting,10.36,227,196,2030.56,mid,All Season,–,7,7,January
+EL130,Laptop,Computing,730.95,720,116,84790.2,mid,Summer,–,7,8,May
+EL131,Smart TV,Television,530.43,573,325,172389.75,mid,Winter,Christmas,10,15,June
+EL132,Mixer Grinder,Kitchen,99.09,156,467,46275.03,mid,Monsoon,–,4,6,October
+EL133,Extension Cord,Accessories,7.61,774,137,1042.57,low,Summer,Christmas,5,5,January
+EL134,Mixer Grinder,Kitchen,98.22,497,198,19447.56,high,Summer,Eid,8,8,December
+EL135,Smart TV,Television,556.17,707,104,57841.68,mid,All Season,–,4,9,October
+EL136,Smart TV,Television,434.08,823,274,118937.92,mid,Winter,Eid,5,11,June
+EL137,Laptop,Computing,729.24,539,483,352222.92,low,All Season,–,5,11,March
+EL138,Mixer Grinder,Kitchen,89.25,493,21,1874.25,high,Monsoon,–,9,5,August
+EL139,LED Bulb,Lighting,10.45,162,465,4859.25,mid,Winter,Diwali,7,7,March
+EL140,Laptop,Computing,1265.91,589,164,207609.24,high,Summer,Valentine’s,10,5,June
+EL141,Smart TV,Television,629.94,134,280,176383.2,mid,Winter,–,10,15,November
+EL142,Extension Cord,Accessories,11.07,775,145,1605.15,low,All Season,Diwali,10,6,July
+EL143,LED Bulb,Lighting,16.72,176,145,2424.4,mid,All Season,Valentine’s,9,14,March
+EL144,LED Bulb,Lighting,10.9,979,226,2463.4,mid,Monsoon,Valentine’s,7,14,April
+EL145,Laptop,Computing,770.43,616,175,134825.25,low,All Season,–,4,9,July
+EL146,LED Bulb,Lighting,11.18,538,263,2940.34,high,Monsoon,Valentine’s,10,5,February
+EL147,Smart TV,Television,469.28,650,454,213053.12,mid,Monsoon,Christmas,6,11,November
+EL148,Mixer Grinder,Kitchen,69.24,999,381,26380.44,low,Winter,Eid,5,13,October
+EL149,Extension Cord,Accessories,5.52,230,491,2710.32,mid,Summer,Diwali,7,11,November
+EL150,Extension Cord,Accessories,12.84,489,479,6150.36,high,All Season,Diwali,7,11,August
