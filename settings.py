@@ -8,6 +8,13 @@ SECRET_KEY = 'django-insecure-agentic-ai-project-key'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.lhr.life',
+    'http://*.lhr.life',
+    'https://*.serveousercontent.com',
+    'http://*.serveousercontent.com',
+    'https://*.onrender.com',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
