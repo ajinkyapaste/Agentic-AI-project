@@ -4,6 +4,9 @@ import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('index.html', views.index),
+    path('index/', views.index),
+    path('home/', views.index),
     path("get-products/<str:category>/", views.get_products, name="get_products"),
     path("chat-with-ai/", views.chat_with_ai, name="chat_with_ai"),
 ]
