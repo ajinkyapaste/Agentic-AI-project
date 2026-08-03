@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agentic AI in Data Analytics</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .category-card {
+      cursor: pointer;
+      transition: all 0.25s ease-in-out;
+      border: 2px solid transparent;
+    }
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
+      border-color: #0d6efd;
+    }
+    .category-card.active {
+      border-color: #0d6efd;
+      background-color: #e7f1ff;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <div class="container mt-5 text-center">
+    <h2 class="mb-1 fw-bold">Agentic AI in Data Analytics</h2>
+    <p class="text-muted fw-semibold mb-4">Developed by <span class="badge bg-primary fs-6">Ajinkya</span> | Agentic AI Project</p>
+
+    <!-- Category Cards -->
+    <div class="row justify-content-center" id="category-cards">
+      {% for cat in categories %}
+
+      <div class="col-md-2">
+        <div class="card shadow-sm mb-3 category-card" data-category="{{ cat }}">
+          <div class="card-body">
+            <h5 class="card-title text-capitalize">{{ cat }}</h5>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Product Selection -->
+    <div id="product-section" class="mt-4" style="display:none;">
+      <h4 id="selected-category"></h4>
+      <select id="product-select" class="form-select w-50 mx-auto"></select>
+      <button class="btn btn-primary mt-3" id="confirm-product">OK</button>
+    </div>
+
+    <!-- Chatbot -->
+    <div id="chat-section" class="mt-5" style="display:none;">
+      <div class="card w-75 mx-auto shadow-sm">
+        <div class="card-header">AI Sales Assistant</div>
+        <div class="card-body" id="chat-box" style="height: 300px; overflow-y: scroll; text-align: left;"></div>
+        <div class="card-footer">
+          <input type="text" id="user-message" class="form-control" placeholder="Ask about sales, stock, trends...">
+          <button class="btn btn-success mt-2" id="send-btn">Send</button>
+        </div>
+      </div>
+    <!-- Footer -->
+    <footer class="mt-5 pb-4 text-muted small">
+      Agentic AI Project &copy; 2026 | Developer: <strong>Ajinkya</strong>
+    </footer>
+  </div>
+
+  <script>
+    let selectedCategory = "";
+    let selectedProduct = "";
+
+    // Category click
+    document.querySelectorAll(".category-card").forEach(card => {
+      card.addEventListener("click", () => {
+        document.querySelectorAll(".category-card").forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
+        selectedCategory = card.getAttribute("data-category");
+        document.getElementById("selected-category").innerText = "Select a product from " + selectedCategory;
+        document.getElementById("product-section").style.display = "block";
+
+        fetch(`/get-products/${selectedCategory}/`)
+          .then(res => res.json())
+          .then(data => {
+            const select = document.getElementById("product-select");
+            select.innerHTML = "";
+            data.products.forEach(p => {
+              select.innerHTML += `<option value="${p}">${p}</option>`;
+            });
+          });
+      });
+    });
+
+    // Product confirm
+    document.getElementById("confirm-product").addEventListener("click", () => {
+      selectedProduct = document.getElementById("product-select").value;
+      document.getElementById("chat-section").style.display = "block";
+    });
+
+    // Chatbot send
+    document.getElementById("send-btn").addEventListener("click", () => {
+      const msg = document.getElementById("user-message").value;
+      fetch("/chat-with-ai/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "X-CSRFToken": "{{ csrf_token }}"
+        },
+        body: `category=${selectedCategory}&product=${selectedProduct}&message=${msg}`
+      })
+      .then(res => res.json())
+      .then(data => {
+        const chatBox = document.getElementById("chat-box");
+        chatBox.innerHTML += `<p><b>You:</b> ${msg}</p>`;
+        chatBox.innerHTML += `<p><b>AI:</b> ${data.response}</p>`;
+        document.getElementById("user-message").value = "";
+        chatBox.scrollTop = chatBox.scrollHeight;
+      });
+    });
+  </script>
+</body>
+</html>

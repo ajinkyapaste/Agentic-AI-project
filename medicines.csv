@@ -1,0 +1,51 @@
+Product_ID,Product_Name,Category,Price,Stock,Monthly_Sales,Revenue,Customer_Segment,Season,Festival,Market_Trend_Score,Predicted_Growth_%,Month
+ME101,Multivitamin,Supplements,9.92,595,135,1339.2,high,All Season,–,4,8,April
+ME102,Multivitamin,Supplements,11.64,600,348,4050.72,low,All Season,Eid,10,8,January
+ME103,Paracetamol,Pain Relief,4.44,780,322,1429.68,low,All Season,Diwali,10,8,June
+ME104,Antacid,Digestive,5.2,52,336,1747.2,high,All Season,Valentine’s,9,11,October
+ME105,Antibiotic,Prescription,14.34,685,308,4416.72,high,All Season,Valentine’s,4,15,September
+ME106,Cough Syrup,Cold & Flu,5.25,603,264,1386.0,mid,All Season,Diwali,8,12,November
+ME107,Antibiotic,Prescription,12.96,276,24,311.04,high,Winter,Eid,4,15,February
+ME108,Paracetamol,Pain Relief,4.04,99,429,1733.16,mid,Monsoon,–,4,13,December
+ME109,Paracetamol,Pain Relief,3.73,950,277,1033.21,mid,Summer,–,10,14,March
+ME110,Antacid,Digestive,4.66,662,370,1724.2,mid,Summer,Christmas,6,8,December
+ME111,Multivitamin,Supplements,10.59,717,60,635.4,high,Winter,Valentine’s,10,7,June
+ME112,Cough Syrup,Cold & Flu,6.93,520,276,1912.68,high,Monsoon,Christmas,6,9,October
+ME113,Multivitamin,Supplements,11.16,571,120,1339.2,high,Monsoon,–,6,6,October
+ME114,Antacid,Digestive,4.33,689,313,1355.29,low,All Season,Diwali,7,15,May
+ME115,Paracetamol,Pain Relief,3.24,944,129,417.96,low,All Season,Diwali,10,5,February
+ME116,Antibiotic,Prescription,14.08,331,123,1731.84,low,All Season,Eid,4,12,November
+ME117,Antibiotic,Prescription,11.86,692,390,4625.4,low,Winter,Eid,7,6,March
+ME118,Antacid,Digestive,4.52,322,455,2056.6,low,Summer,Eid,9,12,April
+ME119,Paracetamol,Pain Relief,2.56,67,114,291.84,mid,Summer,Valentine’s,5,10,August
+ME120,Cough Syrup,Cold & Flu,4.33,574,203,878.99,mid,Winter,Valentine’s,8,9,February
+ME121,Antacid,Digestive,4.75,286,44,209.0,mid,All Season,Diwali,7,11,August
+ME122,Multivitamin,Supplements,11.6,287,284,3294.4,low,Monsoon,–,5,13,May
+ME123,Paracetamol,Pain Relief,4.42,67,222,981.24,mid,Winter,Diwali,4,7,June
+ME124,Antacid,Digestive,5.85,538,222,1298.7,low,Summer,Diwali,5,5,December
+ME125,Antibiotic,Prescription,11.5,412,117,1345.5,mid,Summer,–,5,6,February
+ME126,Antibiotic,Prescription,14.04,594,373,5236.92,high,Monsoon,Christmas,7,15,May
+ME127,Antacid,Digestive,5.66,931,175,990.5,high,Monsoon,Christmas,8,7,June
+ME128,Cough Syrup,Cold & Flu,6.84,156,395,2701.8,mid,Monsoon,Diwali,10,8,September
+ME129,Cough Syrup,Cold & Flu,6.03,329,338,2038.14,mid,Monsoon,Diwali,9,10,June
+ME130,Multivitamin,Supplements,10.54,295,85,895.9,mid,All Season,Eid,5,14,March
+ME131,Antibiotic,Prescription,12.04,446,199,2395.96,low,Winter,Diwali,4,5,March
+ME132,Cough Syrup,Cold & Flu,4.65,695,467,2171.55,mid,All Season,Eid,9,9,June
+ME133,Multivitamin,Supplements,11.4,894,41,467.4,low,Winter,Christmas,4,15,February
+ME134,Antibiotic,Prescription,10.72,686,394,4223.68,mid,Summer,Valentine’s,5,14,May
+ME135,Cough Syrup,Cold & Flu,5.95,921,64,380.8,low,All Season,Eid,8,12,June
+ME136,Antacid,Digestive,3.57,302,40,142.8,high,Summer,–,10,5,October
+ME137,Paracetamol,Pain Relief,4.27,185,131,559.37,mid,Winter,Diwali,4,12,January
+ME138,Antacid,Digestive,4.45,136,459,2042.55,mid,Monsoon,–,6,8,February
+ME139,Antibiotic,Prescription,10.51,645,476,5002.76,mid,All Season,Christmas,7,15,January
+ME140,Multivitamin,Supplements,10.38,740,115,1193.7,mid,Winter,Christmas,8,6,July
+ME141,Antacid,Digestive,4.72,153,30,141.6,mid,All Season,Christmas,10,15,January
+ME142,Antacid,Digestive,3.68,402,114,419.52,low,All Season,Valentine’s,5,12,March
+ME143,Antibiotic,Prescription,11.57,614,146,1689.22,mid,Summer,Valentine’s,8,11,September
+ME144,Antacid,Digestive,3.69,956,358,1321.02,mid,Summer,Eid,5,12,November
+ME145,Multivitamin,Supplements,8.66,830,271,2346.86,mid,All Season,–,8,11,May
+ME146,Antibiotic,Prescription,14.83,143,271,4018.93,high,Winter,Valentine’s,9,12,February
+ME147,Paracetamol,Pain Relief,4.55,188,81,368.55,mid,Winter,Diwali,6,9,November
+ME148,Multivitamin,Supplements,10.18,705,412,4194.16,mid,Monsoon,Valentine’s,4,9,July
+ME149,Paracetamol,Pain Relief,4.02,342,296,1189.92,mid,Monsoon,Eid,5,15,April
+ME150,Paracetamol,Pain Relief,2.24,266,45,100.8,mid,All Season,Eid,7,11,July

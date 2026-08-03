@@ -1,0 +1,51 @@
+Product_ID,Product_Name,Category,Price,Stock,Monthly_Sales,Revenue,Customer_Segment,Season,Festival,Market_Trend_Score,Predicted_Growth_%,Month
+CA101,Used Car,Economy,4332.93,600,121,524284.53,mid,Winter,Christmas,9,7,October
+CA102,Used Car,Economy,5596.24,648,152,850628.48,mid,All Season,Eid,5,7,October
+CA103,Hatchback,Economy,7038.61,329,458,3223683.38,low,Summer,Valentine’s,9,15,February
+CA104,Used Car,Economy,4055.63,807,127,515065.01,mid,Monsoon,Christmas,6,8,May
+CA105,Electric Car,Eco,27149.75,934,380,10316905.0,mid,Winter,Valentine’s,9,12,May
+CA106,Hatchback,Economy,7622.12,433,295,2248525.4,high,Summer,Valentine’s,7,7,November
+CA107,Sedan,Luxury,19986.84,623,488,9753577.92,mid,Winter,–,9,9,February
+CA108,SUV,Family,25294.39,676,239,6045359.21,low,Monsoon,Christmas,4,10,April
+CA109,Used Car,Economy,5584.29,480,141,787384.89,low,Winter,Valentine’s,5,12,October
+CA110,Used Car,Economy,4823.65,827,116,559543.4,high,Summer,–,4,10,October
+CA111,Hatchback,Economy,7454.97,917,73,544212.81,high,Monsoon,Christmas,4,12,March
+CA112,SUV,Family,25340.53,371,297,7526137.41,high,Winter,–,6,6,June
+CA113,Used Car,Economy,4970.2,587,278,1381715.6,low,Winter,Diwali,5,6,January
+CA114,Sedan,Luxury,21054.31,345,463,9748145.53,high,Monsoon,–,7,5,October
+CA115,Sedan,Luxury,20321.63,759,368,7478359.84,mid,All Season,Christmas,6,13,March
+CA116,SUV,Family,29583.03,728,180,5324945.4,mid,Monsoon,Diwali,5,8,November
+CA117,Hatchback,Economy,7155.3,984,212,1516923.6,mid,Winter,Eid,7,15,August
+CA118,Sedan,Luxury,18036.24,129,368,6637336.32,low,All Season,Christmas,6,15,June
+CA119,Sedan,Luxury,18550.43,210,271,5027166.53,mid,Winter,Eid,6,14,October
+CA120,Electric Car,Eco,26126.46,192,28,731540.88,high,Winter,Valentine’s,9,12,March
+CA121,Sedan,Luxury,18428.74,945,236,4349182.64,mid,Summer,–,8,10,April
+CA122,Used Car,Economy,5564.17,871,227,1263066.59,mid,Winter,Eid,7,8,January
+CA123,SUV,Family,25450.67,55,175,4453867.25,mid,Winter,Valentine’s,7,15,February
+CA124,Used Car,Economy,4517.09,861,278,1255751.02,low,Summer,–,5,11,March
+CA125,Electric Car,Eco,38322.45,155,440,16861878.0,mid,Monsoon,Diwali,10,6,October
+CA126,Sedan,Luxury,20161.14,602,472,9516058.08,high,Winter,Diwali,7,13,July
+CA127,Electric Car,Eco,29183.11,362,194,5661523.34,high,All Season,–,5,8,June
+CA128,SUV,Family,22213.59,577,422,9374134.98,mid,All Season,Eid,9,10,January
+CA129,Sedan,Luxury,18401.79,708,407,7489528.53,high,Monsoon,Christmas,10,5,July
+CA130,Sedan,Luxury,19439.26,459,144,2799253.44,low,Winter,Valentine’s,10,14,December
+CA131,Hatchback,Economy,8076.34,407,86,694565.24,low,All Season,Diwali,7,14,May
+CA132,Used Car,Economy,5780.14,757,468,2705105.52,high,All Season,Valentine’s,7,14,September
+CA133,SUV,Family,26614.76,530,489,13014617.64,mid,Monsoon,Valentine’s,4,5,September
+CA134,Electric Car,Eco,34971.98,557,232,8113499.36,high,Summer,Christmas,10,13,February
+CA135,Sedan,Luxury,23202.24,550,225,5220504.0,low,Winter,Diwali,8,12,September
+CA136,Sedan,Luxury,21369.88,456,486,10385761.68,mid,Winter,Valentine’s,5,14,November
+CA137,Sedan,Luxury,23901.2,455,66,1577479.2,mid,Monsoon,–,9,13,May
+CA138,Used Car,Economy,4085.02,94,170,694453.4,mid,Winter,Valentine’s,9,11,November
+CA139,Electric Car,Eco,38850.87,237,383,14879883.21,mid,All Season,Christmas,8,7,November
+CA140,Hatchback,Economy,8655.14,825,368,3185091.52,high,All Season,Valentine’s,9,12,February
+CA141,Hatchback,Economy,8448.45,138,428,3615936.6,high,Summer,Eid,7,15,October
+CA142,SUV,Family,21013.21,450,48,1008634.08,low,Winter,Eid,6,5,March
+CA143,SUV,Family,20721.98,449,421,8723953.58,mid,Monsoon,Valentine’s,7,5,November
+CA144,Hatchback,Economy,8197.29,469,241,1975546.89,mid,Monsoon,Diwali,7,13,May
+CA145,SUV,Family,24483.13,900,293,7173557.09,mid,Winter,Diwali,4,5,December
+CA146,Sedan,Luxury,24645.78,197,430,10597685.4,low,Winter,Eid,6,7,February
+CA147,SUV,Family,20824.84,445,25,520621.0,mid,Summer,Diwali,5,11,February
+CA148,Electric Car,Eco,26502.2,680,270,7155594.0,low,All Season,–,8,10,April
+CA149,Electric Car,Eco,36415.82,372,396,14420664.72,high,Summer,Diwali,7,5,May
+CA150,Hatchback,Economy,8425.17,785,335,2822431.95,high,All Season,Valentine’s,6,6,April
