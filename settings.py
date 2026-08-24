@@ -77,3 +77,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Session configuration for Vercel (Avoid SQLite write locks in serverless environment)
+SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
+
