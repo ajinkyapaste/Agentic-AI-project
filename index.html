@@ -438,6 +438,88 @@
       border-color: var(--accent-blue) !important;
     }
 
+    /* Season Badge Styles */
+    .season-badge {
+      border: 1px solid var(--border-panel);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      transition: all 0.3s;
+    }
+    
+    body.light-theme .season-badge {
+      background: rgba(15, 23, 42, 0.02);
+    }
+    
+    .season-badge.active-spring {
+      opacity: 1 !important;
+      border-color: #ec4899;
+      background: rgba(236, 72, 153, 0.15);
+      color: #f472b6;
+      box-shadow: 0 0 12px rgba(236, 72, 153, 0.25);
+    }
+    .season-badge.active-summer {
+      opacity: 1 !important;
+      border-color: #f59e0b;
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+    }
+    .season-badge.active-autumn {
+      opacity: 1 !important;
+      border-color: #f97316;
+      background: rgba(249, 115, 22, 0.15);
+      color: #fb923c;
+      box-shadow: 0 0 12px rgba(249, 115, 22, 0.25);
+    }
+    .season-badge.active-winter {
+      opacity: 1 !important;
+      border-color: #3b82f6;
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      box-shadow: 0 0 12px rgba(59, 130, 246, 0.25);
+    }
+    .season-badge.active-all {
+      opacity: 1 !important;
+      border-color: #10b981;
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
+    }
+
+    /* Tier Segment Blocks */
+    .tier-segment-block {
+      border: 1px solid var(--border-panel);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+      transition: all 0.3s;
+    }
+    
+    body.light-theme .tier-segment-block {
+      background: rgba(15, 23, 42, 0.02);
+    }
+    
+    .tier-segment-block.active-low {
+      opacity: 1 !important;
+      border-color: var(--accent-orange);
+      background: var(--accent-orange-glow);
+      color: #fb923c;
+      box-shadow: 0 0 12px var(--accent-orange-glow);
+    }
+    .tier-segment-block.active-mid {
+      opacity: 1 !important;
+      border-color: var(--accent-blue);
+      background: var(--accent-blue-glow);
+      color: #60a5fa;
+      box-shadow: 0 0 12px var(--accent-blue-glow);
+    }
+    .tier-segment-block.active-high {
+      opacity: 1 !important;
+      border-color: var(--accent-teal);
+      background: var(--accent-teal-glow);
+      color: #34d399;
+      box-shadow: 0 0 12px var(--accent-teal-glow);
+    }
+
     /* Footer and branding */
     footer {
       border-top: 1px solid var(--border-panel);
@@ -464,7 +546,7 @@
           <i data-lucide="sun" id="theme-icon" style="width: 20px; height: 20px;"></i>
         </button>
         <div class="text-sm-end text-muted fs-7">
-          Developed by <span class="fw-semibold" style="color: var(--text-main);">Ajinkya</span> | Agentic AI Analytics
+          Predictive Telemetry Platform
         </div>
       </div>
     </div>
@@ -603,33 +685,56 @@
           </div>
 
           <div class="row g-4">
+            <!-- Seasonal Peak Widget -->
             <div class="col-md-6">
-              <div class="glass-card p-4 h-100">
-                <h6 class="fw-bold mb-3 d-flex align-items-center gap-2">
-                  <i data-lucide="calendar" class="text-warning"></i> Seasonal Peak
-                </h6>
-                <div class="p-3 rounded border" style="background: var(--bg-subtle-box); border-color: var(--border-panel) !important;">
-                  <div class="mb-3">
-                    <span class="text-muted d-block fs-8 text-uppercase tracking-wider">Optimal Season</span>
-                    <h5 class="fw-bold mb-0" id="seasonal-season">-</h5>
+              <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <h6 class="fw-bold mb-3 d-flex align-items-center gap-2">
+                    <i data-lucide="sun-moon" class="text-warning"></i> Seasonal Peak Demand
+                  </h6>
+                  
+                  <!-- Seasons Grid Selector -->
+                  <div class="d-flex justify-content-between gap-1 mb-3">
+                    <div id="season-spring" class="season-badge flex-fill text-center py-2 px-1 rounded-3 fs-8 fw-semibold border transition-all opacity-25">🌸 Spring</div>
+                    <div id="season-summer" class="season-badge flex-fill text-center py-2 px-1 rounded-3 fs-8 fw-semibold border transition-all opacity-25">☀️ Summer</div>
+                    <div id="season-autumn" class="season-badge flex-fill text-center py-2 px-1 rounded-3 fs-8 fw-semibold border transition-all opacity-25">🍂 Autumn</div>
+                    <div id="season-winter" class="season-badge flex-fill text-center py-2 px-1 rounded-3 fs-8 fw-semibold border transition-all opacity-25">❄️ Winter</div>
+                  </div>
+                </div>
+
+                <!-- Peak Event Banner -->
+                <div class="p-3 rounded border position-relative overflow-hidden d-flex align-items-center gap-3" style="background: var(--bg-subtle-box); border-color: var(--border-panel) !important;">
+                  <div class="p-2 rounded bg-warning-subtle text-warning d-flex align-items-center justify-content-center">
+                    <i data-lucide="sparkles" style="width: 20px; height: 20px;"></i>
                   </div>
                   <div>
-                    <span class="text-muted d-block fs-8 text-uppercase tracking-wider">Peak Festival Event</span>
-                    <h5 class="fw-bold mb-0" id="seasonal-festival">-</h5>
+                    <span class="text-muted d-block fs-8 text-uppercase tracking-wider">Peak Campaign Event</span>
+                    <h5 class="fw-bold text-white mb-0" id="seasonal-festival">-</h5>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- Consumer Segment Widget -->
             <div class="col-md-6">
-              <div class="glass-card p-4 h-100">
-                <h6 class="fw-bold mb-3 d-flex align-items-center gap-2">
-                  <i data-lucide="users" class="text-info"></i> Consumer Segment
-                </h6>
-                <div class="p-3 rounded border text-center" style="background: var(--bg-subtle-box); border-color: var(--border-panel) !important;">
-                  <span class="text-muted d-block fs-8 text-uppercase tracking-wider mb-2">Value Tier Classification</span>
-                  <span class="badge px-4 py-2 fs-5" id="customer-tier-badge" style="background: rgba(59, 130, 246, 0.15); border: 1px solid var(--accent-blue); color: var(--accent-blue);">-</span>
-                  <p class="text-muted mt-2 mb-0 fs-8" id="customer-tier-desc"></p>
+              <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <h6 class="fw-bold mb-3 d-flex align-items-center gap-2">
+                    <i data-lucide="target" class="text-info"></i> Consumer Segmentation
+                  </h6>
+
+                  <!-- Tier Visualizer Meter -->
+                  <div class="d-flex justify-content-between gap-2 mb-3">
+                    <div id="tier-low" class="tier-segment-block flex-fill text-center py-1.5 px-1 rounded-3 fs-8 fw-semibold border transition-all opacity-25" style="border-color: var(--border-panel);">Low (Budget)</div>
+                    <div id="tier-mid" class="tier-segment-block flex-fill text-center py-1.5 px-1 rounded-3 fs-8 fw-semibold border transition-all opacity-25" style="border-color: var(--border-panel);">Mid (Standard)</div>
+                    <div id="tier-high" class="tier-segment-block flex-fill text-center py-1.5 px-1 rounded-3 fs-8 fw-semibold border transition-all opacity-25" style="border-color: var(--border-panel);">High (Premium)</div>
+                  </div>
+                </div>
+
+                <!-- Segment Description -->
+                <div class="p-3 rounded border" style="background: var(--bg-subtle-box); border-color: var(--border-panel) !important;">
+                  <span class="text-muted d-block fs-8 text-uppercase tracking-wider mb-1">Target Persona</span>
+                  <p class="mb-0 fs-8 text-light-emphasis" id="customer-tier-desc">-</p>
                 </div>
               </div>
             </div>
@@ -689,7 +794,7 @@
   <footer class="text-center text-muted">
     <div class="container">
       <p class="mb-1 fs-7">Agentic AI in Data Analytics | Predictive & ML Forecasting Engine</p>
-      <p class="mb-0 fs-8 text-secondary">&copy; 2026 | Developer: Ajinkya | Configured for Vercel Serverless Platform</p>
+      <p class="mb-0 fs-8 text-secondary">&copy; 2026 | Enterprise Edition | Configured for Vercel Serverless Platform</p>
     </div>
   </footer>
 
@@ -800,8 +905,8 @@
       }
       list.forEach(item => {
         const div = document.createElement("div");
-        div.className = "autocomplete-item";
-        div.innerText = item;
+        div.className = "autocomplete-item d-flex align-items-center gap-2";
+        div.innerHTML = `<i data-lucide="package" style="width: 14px; height: 14px; opacity: 0.6;"></i> <span>${item}</span>`;
         div.addEventListener("click", () => {
           searchInput.value = item;
           selectedProduct = item;
@@ -810,6 +915,8 @@
         });
         dropdownList.appendChild(div);
       });
+      // Re-initialize icons so the newly added package icon renders correctly
+      lucide.createIcons();
     }
 
     // Confirm product selection and fetch initial data
@@ -909,28 +1016,47 @@
       }
       
       // 5. Seasonal & Segmentation Card Setups
-      document.getElementById("seasonal-season").innerText = metrics.season;
+      // Reset all season badges first
+      document.querySelectorAll(".season-badge").forEach(b => {
+        b.className = "season-badge flex-fill text-center py-2 px-1 rounded-3 fs-8 fw-semibold border transition-all opacity-25";
+      });
+      
+      // Activate matching season badge
+      const activeSeason = metrics.season.toLowerCase();
+      if (activeSeason.includes("spring")) {
+        document.getElementById("season-spring").classList.add("active-spring");
+      } else if (activeSeason.includes("summer")) {
+        document.getElementById("season-summer").classList.add("active-summer");
+      } else if (activeSeason.includes("autumn") || activeSeason.includes("fall")) {
+        document.getElementById("season-autumn").classList.add("active-autumn");
+      } else if (activeSeason.includes("winter")) {
+        document.getElementById("season-winter").classList.add("active-winter");
+      } else if (activeSeason.includes("all")) {
+        document.querySelectorAll(".season-badge").forEach(b => {
+          b.className = b.className.replace("opacity-25", "");
+          b.classList.add("active-all");
+        });
+      }
+      
       document.getElementById("seasonal-festival").innerText = metrics.festival;
       
-      const tierBadge = document.getElementById("customer-tier-badge");
-      const tierDesc = document.getElementById("customer-tier-desc");
-      tierBadge.innerText = metrics.tier.toUpperCase() + " TIER";
+      // Reset all tier segment blocks first
+      document.querySelectorAll(".tier-segment-block").forEach(b => {
+        b.className = "tier-segment-block flex-fill text-center py-1.5 px-1 rounded-3 fs-8 fw-semibold border transition-all opacity-25";
+      });
       
-      if (metrics.tier.toLowerCase() === "high") {
-        tierBadge.style.borderColor = "var(--accent-teal)";
-        tierBadge.style.backgroundColor = "var(--accent-teal-glow)";
-        tierBadge.style.color = "var(--accent-teal)";
-        tierDesc.innerText = "Premium high-value accounts that prioritize delivery speed and product reliability over pricing margins.";
-      } else if (metrics.tier.toLowerCase() === "mid") {
-        tierBadge.style.borderColor = "var(--accent-blue)";
-        tierBadge.style.backgroundColor = "var(--accent-blue-glow)";
-        tierBadge.style.color = "var(--accent-blue)";
-        tierDesc.innerText = "Standard account segment balancing quality standards, volume guarantees, and competitive contract pricing.";
+      // Activate matching tier segment block
+      const activeTier = metrics.tier.toLowerCase();
+      const descEl = document.getElementById("customer-tier-desc");
+      if (activeTier === "high") {
+        document.getElementById("tier-high").classList.add("active-high");
+        descEl.innerText = "Premium high-value accounts that prioritize delivery speed and product reliability over pricing margins.";
+      } else if (activeTier === "mid") {
+        document.getElementById("tier-mid").classList.add("active-mid");
+        descEl.innerText = "Standard account segment balancing quality standards, volume guarantees, and competitive contract pricing.";
       } else {
-        tierBadge.style.borderColor = "var(--accent-orange)";
-        tierBadge.style.backgroundColor = "var(--accent-orange-glow)";
-        tierBadge.style.color = "var(--accent-orange)";
-        tierDesc.innerText = "Budget-sensitive clients requiring lean price points, frequent promotion alerts, and flexible bulk volume order limits.";
+        document.getElementById("tier-low").classList.add("active-low");
+        descEl.innerText = "Budget-sensitive clients requiring lean price points, frequent promotion alerts, and flexible bulk volume order limits.";
       }
       
       // 6. Draw/Update ApexCharts Telemetry
