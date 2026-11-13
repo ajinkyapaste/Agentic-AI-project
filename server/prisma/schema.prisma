@@ -1,0 +1,108 @@
+// Prisma Schema for Sales Intelligence & AI-Powered Analytics Platform
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String    @id @default(uuid())
+  username     String    @unique
+  email        String    @unique
+  passwordHash String
+  role         String    @default("ADMIN")
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  datasets     Dataset[]
+
+  @@map("users")
+}
+
+model Dataset {
+  id               String        @id @default(uuid())
+  name             String
+  originalFilename String
+  fileSize         Int
+  rowCount         Int           @default(0)
+  columnCount      Int           @default(0)
+  detectedColumns  String        @default("[]") // JSON string of detected columns & data types
+  columnMapping    String        @default("{}") // JSON string of source-to-canonical mapping
+  validationReport String        @default("{}") // JSON string of missing, duplicate, invalid counts
+  summaryMetrics   String        @default("{}") // JSON string of pre-aggregated KPIs
+  status           String        @default("READY") // PROCESSING, READY, ERROR
+  errorMessage     String?
+  userId           String
+  user             User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  records          SaleRecord[]
+  forecastRuns     ForecastRun[]
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  @@map("datasets")
+}
+
+model SaleRecord {
+  id               String    @id @default(uuid())
+  datasetId        String
+  dataset          Dataset   @relation(fields: [datasetId], references: [id], onDelete: Cascade)
+  productId        String    @default("")
+  productName      String
+  category         String
+  region           String    @default("Global")
+  price            Float     @default(0)
+  cost             Float     @default(0)
+  stock            Float     @default(0)
+  monthlySales     Float     @default(0)
+  revenue          Float     @default(0)
+  profit           Float     @default(0)
+  marginPercentage Float     @default(0)
+  customerSegment  String    @default("mid") // low, mid, high
+  season           String    @default("All Season") // Summer, Monsoon, Winter, Post-monsoon, All Season
+  festival         String    @default("None")
+  marketTrendScore Float     @default(5)
+  predictedGrowth  Float     @default(0)
+  month            String    @default("")
+  quarter          String    @default("Q1")
+  year             Int       @default(2026)
+  date             DateTime?
+  createdAt        DateTime  @default(now())
+
+  @@index([datasetId])
+  @@index([category])
+  @@index([productName])
+  @@index([season])
+  @@map("sale_records")
+}
+
+model ForecastRun {
+  id          String   @id @default(uuid())
+  datasetId   String
+  dataset     Dataset  @relation(fields: [datasetId], references: [id], onDelete: Cascade)
+  targetType  String   @default("REVENUE") // REVENUE, SALES_VOLUME
+  targetName  String   @default("Overall") // Overall, category name, or product name
+  algorithm   String   // HOLT_WINTERS, MOVING_AVERAGE, SEASONAL_NAIVE
+  parameters  String   @default("{}") // JSON string of alpha, beta, gamma, window
+  metrics     String   @default("{}") // JSON string of MAE, RMSE, MAPE
+  historyData String   @default("[]") // JSON array of past actual points
+  forecastData String  @default("[]") // JSON array of forecast points with confidence bands
+  createdAt   DateTime @default(now())
+
+  @@index([datasetId])
+  @@map("forecast_runs")
+}
+
+model AiChatHistory {
+  id          String   @id @default(uuid())
+  datasetId   String?
+  userId      String?
+  question    String
+  response    String
+  contextData String   @default("{}") // JSON string of extracted metrics/heuristics
+  createdAt   DateTime @default(now())
+
+  @@map("ai_chat_history")
+}
+

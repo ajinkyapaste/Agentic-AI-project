@@ -1,0 +1,27 @@
+{
+  "name": "sales-intelligence-platform",
+  "version": "1.0.0",
+  "description": "Sales Intelligence & AI-Powered Analytics Platform",
+  "scripts": {
+    "server:dev": "npm --prefix server run dev",
+    "server:start": "npm --prefix server start",
+    "client:dev": "npm --prefix client run dev",
+    "client:build": "npm --prefix client run build",
+    "seed": "npm --prefix server run seed",
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev": "node -e \"const { spawn } = require('child_process'); spawn('npm', ['--prefix', 'server', 'run', 'dev'], { stdio: 'inherit', shell: true }); spawn('npm', ['--prefix', 'client', 'run', 'dev'], { stdio: 'inherit', shell: true });\""
+  },
+  "keywords": [
+    "sales-intelligence",
+    "analytics",
+    "forecasting",
+    "machine-learning",
+    "react",
+    "vite",
+    "express",
+    "prisma"
+  ],
+  "author": "ajinkya",
+  "license": "ISC"
+}
+
