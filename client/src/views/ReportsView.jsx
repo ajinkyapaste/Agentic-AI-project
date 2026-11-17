@@ -166,17 +166,18 @@ export default function ReportsView() {
           return (
             <div
               key={r.id}
-              className="glass-card rounded-2xl p-6 flex flex-col justify-between border border-panelBorder hover:border-blue-500/40 transition-all"
+              className="glass-card group rounded-2xl p-6 flex flex-col justify-between border border-panelBorder hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 relative overflow-hidden"
             >
+              <div className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-blue-500 to-indigo-500 opacity-70 group-hover:opacity-100 transition-opacity" />
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-500 dark:text-blue-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-6 h-6" />
                 </div>
-                <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1">
+                <span className="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider block mb-1">
                   {r.format}
                 </span>
-                <h4 className="text-base font-bold text-white mb-2">{r.title}</h4>
-                <p className="text-xs text-slate-300 leading-relaxed">{r.description}</p>
+                <h4 className="text-base font-bold text-slate-900 dark:text-white mb-2">{r.title}</h4>
+                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">{r.description}</p>
               </div>
 
               <div className="mt-6 pt-4 border-t border-panelBorder flex flex-col gap-2">

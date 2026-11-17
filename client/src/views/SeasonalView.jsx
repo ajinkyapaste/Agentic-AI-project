@@ -89,36 +89,36 @@ export default function SeasonalView() {
           return (
             <div
               key={item.season}
-              className={`glass-card rounded-2xl p-4 flex flex-col justify-between transition-all ${
+              className={`glass-card rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
                 isPeak
-                  ? 'border-amber-500/50 bg-amber-500/10 shadow-lg'
-                  : 'hover:border-slate-500'
+                  ? 'border-amber-500/60 bg-amber-500/10 shadow-lg'
+                  : 'hover:border-blue-500/40'
               }`}
             >
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <div className="p-2 rounded-xl bg-white/5 border border-panelBorder">
+                  <div className="p-2 rounded-xl bg-slate-100/60 dark:bg-white/5 border border-panelBorder">
                     {getSeasonIcon(item.season)}
                   </div>
-                  <span className="font-bold text-sm text-white">{item.season}</span>
+                  <span className="font-bold text-sm text-slate-900 dark:text-white">{item.season}</span>
                 </div>
                 {isPeak && (
-                  <span className="text-[10px] uppercase font-bold text-amber-400 bg-amber-500/20 px-2 py-0.5 rounded-full border border-amber-500/30">
+                  <span className="text-[10px] uppercase font-bold text-amber-500 dark:text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/30">
                     Peak
                   </span>
                 )}
               </div>
 
               <div>
-                <span className="text-xs text-slate-400 block">Season Revenue</span>
-                <h4 className="text-lg font-bold text-white font-mono">
+                <span className="text-xs text-slate-500 dark:text-slate-400 block mb-0.5">Season Revenue</span>
+                <h4 className="text-lg font-bold text-slate-900 dark:text-white font-mono">
                   ${(item.revenue || 0).toLocaleString()}
                 </h4>
               </div>
 
               <div className="mt-3 pt-2.5 border-t border-panelBorder flex items-center justify-between text-xs">
-                <span className="text-slate-400">{item.revenueShare}% Share</span>
-                <span className="font-semibold text-blue-400 font-mono">
+                <span className="text-slate-500 dark:text-slate-400">{item.revenueShare}% Share</span>
+                <span className="font-semibold text-blue-500 dark:text-blue-400 font-mono">
                   Idx: {item.seasonalIndex}
                 </span>
               </div>

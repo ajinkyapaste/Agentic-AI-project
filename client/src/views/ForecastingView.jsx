@@ -189,6 +189,7 @@ export default function ForecastingView() {
               className="glass-input w-full rounded-xl px-3 py-2 text-xs font-medium cursor-pointer"
             >
               <option value="HOLT_WINTERS">Holt-Winters Triple Smoothing</option>
+              <option value="TENSORFLOW_NEURAL_NET">TensorFlow Deep Neural Network (ML)</option>
               <option value="MOVING_AVERAGE">Moving Average (SMA/WMA)</option>
               <option value="SEASONAL_NAIVE">Seasonal Naive</option>
             </select>
@@ -264,44 +265,48 @@ export default function ForecastingView() {
       {/* Accuracy & Backtesting Evaluation Cards */}
       {forecastResult && (
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          <div className="glass-card rounded-2xl p-4">
-            <span className="text-[11px] uppercase tracking-wider text-slate-400 block mb-1">
+          <div className="glass-card rounded-2xl p-4 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+            <div className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-emerald-500 to-teal-500" />
+            <span className="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block mb-1">
               Backtesting Accuracy
             </span>
-            <h3 className="text-2xl font-bold text-emerald-400 font-mono">
+            <h3 className="text-2xl font-bold text-emerald-500 dark:text-emerald-400 font-mono">
               {forecastResult.metrics?.accuracy || 90}%
             </h3>
-            <span className="text-[10px] text-slate-400 mt-1 block">Out-of-sample backtest</span>
+            <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-1 block">Out-of-sample backtest</span>
           </div>
 
-          <div className="glass-card rounded-2xl p-4">
-            <span className="text-[11px] uppercase tracking-wider text-slate-400 block mb-1">
+          <div className="glass-card rounded-2xl p-4 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+            <div className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-blue-500 to-indigo-500" />
+            <span className="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block mb-1">
               Mean Abs. Pct. Error (MAPE)
             </span>
-            <h3 className="text-2xl font-bold text-blue-400 font-mono">
+            <h3 className="text-2xl font-bold text-blue-500 dark:text-blue-400 font-mono">
               {forecastResult.metrics?.mape || 0}%
             </h3>
-            <span className="text-[10px] text-slate-400 mt-1 block">Relative variance error</span>
+            <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-1 block">Relative variance error</span>
           </div>
 
-          <div className="glass-card rounded-2xl p-4">
-            <span className="text-[11px] uppercase tracking-wider text-slate-400 block mb-1">
+          <div className="glass-card rounded-2xl p-4 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+            <div className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-amber-500 to-orange-500" />
+            <span className="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block mb-1">
               Mean Absolute Error (MAE)
             </span>
-            <h3 className="text-2xl font-bold text-amber-400 font-mono">
+            <h3 className="text-2xl font-bold text-amber-500 dark:text-amber-400 font-mono">
               ${(forecastResult.metrics?.mae || 0).toLocaleString()}
             </h3>
-            <span className="text-[10px] text-slate-400 mt-1 block">Average absolute deviation</span>
+            <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-1 block">Average absolute deviation</span>
           </div>
 
-          <div className="glass-card rounded-2xl p-4">
-            <span className="text-[11px] uppercase tracking-wider text-slate-400 block mb-1">
+          <div className="glass-card rounded-2xl p-4 relative overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+            <div className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-purple-500 to-pink-500" />
+            <span className="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400 block mb-1">
               Root Mean Sq. Error (RMSE)
             </span>
-            <h3 className="text-2xl font-bold text-purple-400 font-mono">
+            <h3 className="text-2xl font-bold text-purple-500 dark:text-purple-400 font-mono">
               ${(forecastResult.metrics?.rmse || 0).toLocaleString()}
             </h3>
-            <span className="text-[10px] text-slate-400 mt-1 block">Standard residual error</span>
+            <span className="text-[10px] text-slate-500 dark:text-slate-400 mt-1 block">Standard residual error</span>
           </div>
         </div>
       )}

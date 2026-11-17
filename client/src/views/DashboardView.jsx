@@ -132,14 +132,14 @@ export default function DashboardView() {
       {/* Charts Row 1: Monthly Trends & Category Revenue Share */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Monthly Revenue & Profit Area Chart */}
-        <div className="lg:col-span-2 glass-card rounded-2xl p-5">
+        <div className="lg:col-span-2 glass-card rounded-2xl p-5 hover:shadow-lg transition-all duration-300">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h4 className="font-bold text-white text-base flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-blue-400" />
+              <h4 className="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2">
+                <TrendingUp className="w-4 h-4 text-blue-500 dark:text-blue-400" />
                 Monthly Revenue & Profit Progression
               </h4>
-              <p className="text-xs text-slate-400">Historical performance with MoM telemetry</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400">Historical performance with MoM telemetry</p>
             </div>
           </div>
 
@@ -179,13 +179,13 @@ export default function DashboardView() {
         </div>
 
         {/* Category Share Donut Chart */}
-        <div className="glass-card rounded-2xl p-5 flex flex-col justify-between">
+        <div className="glass-card rounded-2xl p-5 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
           <div>
-            <h4 className="font-bold text-white text-base flex items-center gap-2 mb-1">
-              <Award className="w-4 h-4 text-amber-400" />
+            <h4 className="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2 mb-1">
+              <Award className="w-4 h-4 text-amber-500 dark:text-amber-400" />
               Category Revenue Share
             </h4>
-            <p className="text-xs text-slate-400 mb-2">Contribution by portfolio category</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400 mb-2">Contribution by portfolio category</p>
           </div>
 
           <div className="h-60 w-full">
@@ -237,12 +237,12 @@ export default function DashboardView() {
       {/* Row 2: Customer Segments & AI Quick Highlights */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Customer Purchasing Tiers Bar Chart */}
-        <div className="glass-card rounded-2xl p-5">
-          <h4 className="font-bold text-white text-base flex items-center gap-2 mb-1">
-            <DollarSign className="w-4 h-4 text-emerald-400" />
+        <div className="glass-card rounded-2xl p-5 hover:shadow-lg transition-all duration-300">
+          <h4 className="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2 mb-1">
+            <DollarSign className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
             Customer Value Segments
           </h4>
-          <p className="text-xs text-slate-400 mb-4">Revenue distributed across buyer value tiers</p>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mb-4">Revenue distributed across buyer value tiers</p>
 
           <div className="h-56 w-full">
             <ResponsiveContainer width="100%" height="100%">
@@ -268,16 +268,16 @@ export default function DashboardView() {
         </div>
 
         {/* AI Quick Strategy Cards */}
-        <div className="lg:col-span-2 glass-card rounded-2xl p-5 flex flex-col justify-between">
+        <div className="lg:col-span-2 glass-card rounded-2xl p-5 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
           <div className="flex items-center justify-between mb-3">
             <div>
-              <h4 className="font-bold text-white text-base flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-blue-400" />
+              <h4 className="font-bold text-slate-900 dark:text-white text-base flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-blue-500 dark:text-blue-400" />
                 Live AI Strategic Insights
               </h4>
-              <p className="text-xs text-slate-400">Deterministic recommendations computed from active dataset</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400">Deterministic recommendations computed from active dataset</p>
             </div>
-            <span className="text-[11px] font-semibold text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-full border border-blue-500/20">
+            <span className="text-[11px] font-semibold text-blue-500 dark:text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-full border border-blue-500/20">
               Evidence-Based
             </span>
           </div>
@@ -286,20 +286,20 @@ export default function DashboardView() {
             {insights.slice(0, 2).map((ins) => (
               <div
                 key={ins.id}
-                className="p-3.5 rounded-xl border border-panelBorder bg-white/5 flex items-start gap-3"
+                className="p-3.5 rounded-xl border border-panelBorder bg-slate-100/50 dark:bg-white/5 flex items-start gap-3 hover:border-blue-500/30 transition-colors"
               >
-                <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400 shrink-0">
+                <div className="p-2 rounded-lg bg-blue-500/10 text-blue-500 dark:text-blue-400 shrink-0">
                   <Sparkles className="w-4 h-4" />
                 </div>
                 <div className="min-w-0">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold text-white">{ins.title}</span>
-                    <span className="text-[10px] text-blue-300 font-mono bg-blue-500/20 px-1.5 py-0.5 rounded">
+                    <span className="text-xs font-bold text-slate-900 dark:text-white">{ins.title}</span>
+                    <span className="text-[10px] text-blue-600 dark:text-blue-300 font-mono bg-blue-500/10 dark:bg-blue-500/20 px-1.5 py-0.5 rounded">
                       {ins.metricBadge}
                     </span>
                   </div>
-                  <p className="text-xs text-slate-300 mt-1 line-clamp-2">{ins.summary}</p>
-                  <p className="text-[11px] text-emerald-400 font-medium mt-1">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 line-clamp-2">{ins.summary}</p>
+                  <p className="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium mt-1">
                     💡 Action: {ins.recommendation}
                   </p>
                 </div>
@@ -310,13 +310,13 @@ export default function DashboardView() {
       </div>
 
       {/* Top Performing SKUs Table */}
-      <div className="glass-card rounded-2xl p-5">
-        <h4 className="font-bold text-white text-base mb-1">Top Performing SKUs by Revenue</h4>
-        <p className="text-xs text-slate-400 mb-4">Ranked by revenue contribution with inventory status</p>
+      <div className="glass-card rounded-2xl p-5 hover:shadow-lg transition-all duration-300">
+        <h4 className="font-bold text-slate-900 dark:text-white text-base mb-1">Top Performing SKUs by Revenue</h4>
+        <p className="text-xs text-slate-500 dark:text-slate-400 mb-4">Ranked by revenue contribution with inventory status</p>
 
         <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs text-slate-300">
-            <thead className="text-[11px] uppercase tracking-wider text-slate-400 border-b border-panelBorder">
+          <table className="w-full text-left text-xs text-slate-600 dark:text-slate-300">
+            <thead className="text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400 border-b border-panelBorder">
               <tr>
                 <th className="pb-3 font-semibold">Product Name</th>
                 <th className="pb-3 font-semibold">Category</th>
@@ -329,8 +329,8 @@ export default function DashboardView() {
             </thead>
             <tbody className="divide-y divide-panelBorder">
               {products.slice(0, 5).map((p) => (
-                <tr key={p.productId || p.productName} className="hover:bg-white/5 transition-colors">
-                  <td className="py-3 font-medium text-white">{p.productName}</td>
+                <tr key={p.productId || p.productName} className="hover:bg-slate-100/40 dark:hover:bg-white/5 transition-colors">
+                  <td className="py-3 font-medium text-slate-900 dark:text-white">{p.productName}</td>
                   <td className="py-3 text-slate-400">{p.category}</td>
                   <td className="py-3 text-right font-mono">${(p.avgPrice || 0).toFixed(2)}</td>
                   <td className="py-3 text-right font-mono">{(p.totalSales || 0).toLocaleString()}</td>

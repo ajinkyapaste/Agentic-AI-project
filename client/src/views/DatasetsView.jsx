@@ -142,27 +142,28 @@ export default function DatasetsView() {
           return (
             <div
               key={ds.id}
-              className={`glass-card rounded-2xl p-5 flex flex-col justify-between transition-all ${
+              className={`glass-card group rounded-2xl p-5 flex flex-col justify-between transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:shadow-xl ${
                 isSelected
                   ? 'border-blue-500/60 bg-blue-600/10 shadow-glowBlue'
-                  : 'hover:border-slate-500'
+                  : 'hover:border-blue-500/40'
               }`}
             >
+              <div className={`absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-blue-500 to-indigo-500 ${isSelected ? 'opacity-100' : 'opacity-60 group-hover:opacity-100'} transition-opacity`} />
               <div>
                 <div className="flex items-start justify-between gap-2 mb-2">
                   <div className="flex items-center gap-2.5">
-                    <div className="p-2 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                    <div className="p-2 rounded-xl bg-blue-500/10 text-blue-500 dark:text-blue-400 border border-blue-500/20 group-hover:scale-105 transition-transform duration-300">
                       <FileSpreadsheet className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-sm text-white">{ds.name}</h4>
-                      <span className="text-[10px] text-slate-400 font-mono">
+                      <h4 className="font-bold text-sm text-slate-900 dark:text-white">{ds.name}</h4>
+                      <span className="text-[10px] text-slate-500 dark:text-slate-400 font-mono">
                         {ds.originalFilename}
                       </span>
                     </div>
                   </div>
                   {isSelected && (
-                    <span className="text-[10px] uppercase font-bold text-blue-400 bg-blue-500/20 px-2 py-0.5 rounded-full border border-blue-500/30">
+                    <span className="text-[10px] uppercase font-bold text-blue-600 dark:text-blue-400 bg-blue-500/10 dark:bg-blue-500/20 px-2 py-0.5 rounded-full border border-blue-500/30">
                       Active
                     </span>
                   )}
@@ -170,24 +171,24 @@ export default function DatasetsView() {
 
                 <div className="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-panelBorder text-xs">
                   <div>
-                    <span className="text-[10px] text-slate-500 uppercase block">Total Records</span>
-                    <span className="font-bold text-white font-mono">{ds.rowCount} Rows</span>
+                    <span className="text-[10px] text-slate-500 dark:text-slate-400 uppercase block">Total Records</span>
+                    <span className="font-bold text-slate-900 dark:text-white font-mono">{ds.rowCount} Rows</span>
                   </div>
                   <div>
-                    <span className="text-[10px] text-slate-500 uppercase block">Total Revenue</span>
-                    <span className="font-bold text-emerald-400 font-mono">
+                    <span className="text-[10px] text-slate-500 dark:text-slate-400 uppercase block">Total Revenue</span>
+                    <span className="font-bold text-emerald-600 dark:text-emerald-400 font-mono">
                       ${(kpis.totalRevenue || 0).toLocaleString()}
                     </span>
                   </div>
                   <div>
-                    <span className="text-[10px] text-slate-500 uppercase block">Unique SKUs</span>
-                    <span className="font-medium text-slate-300 font-mono">
+                    <span className="text-[10px] text-slate-500 dark:text-slate-400 uppercase block">Unique SKUs</span>
+                    <span className="font-medium text-slate-700 dark:text-slate-300 font-mono">
                       {kpis.uniqueProducts || '—'}
                     </span>
                   </div>
                   <div>
-                    <span className="text-[10px] text-slate-500 uppercase block">Upload Date</span>
-                    <span className="text-[11px] text-slate-400">
+                    <span className="text-[10px] text-slate-500 dark:text-slate-400 uppercase block">Upload Date</span>
+                    <span className="text-[11px] text-slate-500 dark:text-slate-400">
                       {new Date(ds.createdAt).toLocaleDateString()}
                     </span>
                   </div>
