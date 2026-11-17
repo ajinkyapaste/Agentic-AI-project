@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Cpu, Lock, User, AlertCircle, ArrowRight } from 'lucide-react';
+import { Cpu, Lock, User, AlertCircle, ArrowRight, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 export default function LoginView() {
   const { login } = useAuth();
   const [username, setUsername] = useState('ajinkya');
-  const [password, setPassword] = useState('12345678');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -65,6 +66,7 @@ export default function LoginView() {
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Enter username"
                 className="glass-input w-full rounded-xl pl-10 pr-4 py-2.5 text-sm font-medium transition-all"
+                autoComplete="username"
               />
             </div>
           </div>
@@ -76,20 +78,29 @@ export default function LoginView() {
             <div className="relative">
               <Lock className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password"
-                className="glass-input w-full rounded-xl pl-10 pr-4 py-2.5 text-sm font-medium transition-all"
+                className="glass-input w-full rounded-xl pl-10 pr-11 py-2.5 text-sm font-medium transition-all"
+                autoComplete="current-password"
               />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white p-1 rounded-md transition-colors cursor-pointer"
+                title={showPassword ? 'Hide password' : 'Show password'}
+              >
+                {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+              </button>
             </div>
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full mt-2 py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-glowBlue transition-all flex items-center justify-center gap-2 disabled:opacity-60"
+            className="w-full mt-2 py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-glowBlue transition-all flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer"
           >
             {loading ? (
               <span className="inline-block w-4 h-4 border-2 border-white/20 border-t-white rounded-full animate-spin" />
@@ -102,17 +113,16 @@ export default function LoginView() {
           </button>
         </form>
 
-        {/* Seed Credentials Hint */}
+        {/* Security Notice */}
         <div className="mt-6 pt-5 border-t border-panelBorder text-center">
           <span className="text-[11px] text-slate-400 block mb-1">
-            Default Admin Credentials (from environment seed):
+            Enterprise Protected Access
           </span>
-          <div className="inline-block bg-white/5 border border-panelBorder rounded-lg px-3 py-1 text-xs text-blue-300 font-mono">
-            Username: <strong className="text-white">ajinkya</strong> | Password: <strong className="text-white">12345678</strong>
+          <div className="inline-block bg-white/5 border border-panelBorder rounded-lg px-3 py-1 text-xs text-slate-400 font-mono">
+            Admin: <strong className="text-white">ajinkya</strong> • Secure password authentication
           </div>
         </div>
       </div>
     </div>
   );
 }
-

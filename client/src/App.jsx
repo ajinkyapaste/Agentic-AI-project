@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import { DatasetProvider, useDataset } from './context/DatasetContext';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
+import ChatbotWidget from './components/ChatbotWidget';
 import LoginView from './views/LoginView';
 import DashboardView from './views/DashboardView';
 import SeasonalView from './views/SeasonalView';
@@ -74,6 +75,9 @@ function MainLayout() {
           {renderActiveView()}
         </main>
       </div>
+
+      {/* Persistent Right-Bottom Floating Chatbot Widget */}
+      <ChatbotWidget onNavigateFullChat={() => setCurrentView('ai-chat')} />
     </div>
   );
 }
